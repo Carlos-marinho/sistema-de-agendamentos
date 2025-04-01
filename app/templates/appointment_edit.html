@@ -1,0 +1,29 @@
+<!-- app/templates/appointment_edit.html -->
+{% extends "base.html" %}
+{% block title %}Editar Agendamento{% endblock %}
+{% block content %}
+<h2>Editar Agendamento</h2>
+<form method="post">
+    {{ form.hidden_tag() }} {# Insere automaticamente o CSRF token de forma oculta #}
+    <div>
+        {{ form.date.label }}
+        {{ form.date(size=32) }}
+    </div>
+    <div>
+        {{ form.time.label }}
+        {{ form.time(size=32) }}
+    </div>
+    <div>
+        {{ form.client.label }}
+        {{ form.client(size=32) }}
+    </div>
+    <div>
+        {{ form.service.label }}
+        {{ form.service(size=32) }}
+    </div>
+    <div>
+        {{ form.submit(value='Salvar Alterações') }}
+        <a href="{{ url_for('main.index') }}" class="cancel-button">Cancelar</a>
+    </div>
+</form>
+{% endblock %}
