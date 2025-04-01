@@ -10,18 +10,11 @@ Este projeto é um sistema de agendamento desenvolvido com Flask, que permite cr
 - **Listagem e Filtro:** Visualize os agendamentos com opções de filtragem por data, cliente e serviço.
 - **Templates Reutilizáveis:** Estrutura de HTML e CSS padronizados para uma interface consistente.
 
-## Estrutura do Projeto
-flask_agendamento/ ├── app/ │ ├── init.py │ ├── config.py │ ├── models.py │ ├── forms.py │ ├── routes.py │ ├── static/ │ │ └── style.css │ └── templates/ │ ├── base.html │ ├── appointment_list.html │ └── appointment_form.html ├── tests/ │ └── test_app.py └── run.py
-
 
 ## Requisitos
 
 - Python 3.8 ou superior
-- [Flask](https://flask.palletsprojects.com/)
-- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)
-- [Flask-WTF](https://flask-wtf.readthedocs.io/)
-
-*(Opcional para migrações: [Flask-Migrate](https://flask-migrate.readthedocs.io/))*
+  
 
 ## Instalação e Configuração
 
@@ -29,23 +22,27 @@ flask_agendamento/ ├── app/ │ ├── init.py │ ├── config.py 
 
 No terminal, execute:
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/Carlos-marinho/sistema-de-agendamentos
 cd sistema-de-agendamentos
+```
 
 ### 2. Crie e Ative um Ambiente Virtual
 Linux/MacOS:
-
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
 Windows:
-
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
 ### 3. Instale as Dependências
-
+```
 pip install -r requirements.txt
+```
 
 ### 4. Configuração do Banco de Dados
 O projeto utiliza SQLite para armazenamento de dados. O arquivo de banco de dados (agendamento.db) será criado automaticamente quando a aplicação for iniciada.
@@ -53,7 +50,9 @@ O projeto utiliza SQLite para armazenamento de dados. O arquivo de banco de dado
 ### 5. Executando a Aplicação
 Com o ambiente virtual ativado, inicie a aplicação executando:
 
+```
 python run.py
+```
 
 Acesse a aplicação em:
 
@@ -62,4 +61,6 @@ http://127.0.0.1:5000
 ### 6. Executando os Testes
 Para rodar os testes unitários:
 
+```
 pytest -v --disable-warnings
+```
